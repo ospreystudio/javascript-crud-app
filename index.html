@@ -50,7 +50,25 @@
                     <input type="text" name="firstName" placeholder="First Name">
                     <input type="text" name="lastName" placeholder="Last Name">
                     <input type="number" name="phone" placeholder="Phone">
-                    <input type="Email" name="Email" placeholder="Email">
+                    <input type="email" name="email" placeholder="email">
+                    <button class="btn btn-modal">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--Edit Modal -->
+    <div class="edit-modal modal-wrapper">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Edit User</h3>
+            </div>
+            <div class="modal-body">
+                <form autocomplete="off" class="form">
+                    <input type="text" name="firstName" placeholder="First Name">
+                    <input type="text" name="lastName" placeholder="Last Name">
+                    <input type="number" name="phone" placeholder="Phone">
+                    <input type="email" name="email" placeholder="email">
                     <button class="btn btn-modal">Submit</button>
                 </form>
             </div>
@@ -58,6 +76,32 @@
     </div>
 
 </div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyAhTLsZNMZWunPuZ_Cn3jCVhP91Ltb6vm4",
+        authDomain: "cerudwithchant.firebaseapp.com",
+        projectId: "cerudwithchant",
+        storageBucket: "cerudwithchant.appspot.com",
+        messagingSenderId: "393964139994",
+        appId: "1:393964139994:web:c2da914969ce401b1cbce3",
+        measurementId: "G-10FM9Z7Y5D"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const  db = firebase.firestore()
+</script>
 
 <script src="./script.js"></script>
 </body>
